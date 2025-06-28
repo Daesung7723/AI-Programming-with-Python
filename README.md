@@ -87,3 +87,85 @@
 - 모델 성능 개선 및 기능 보완
 - 팀별 개발 결과물 발표
 - 과정 정리 및 질의응답
+
+
+
+# PyTorch LLM-based AI Service Development Course
+
+### Ⅰ. Course Overview
+
+This course uses PyTorch and Google Colab. Over two weeks, it covers deep learning theory, LLM fine-tuning, and commercial API usage, encompassing the entire AI service development process. The goal is for students to acquire commercial AI software development skills.
+
+### Ⅱ. Learning Objectives
+
+* Establish a development environment based on PyTorch and Google Colab.
+* Understand and implement DNN, CNN, and RNN model architectures.
+* Fine-tune language models using the Hugging Face library.
+* Understand and utilize embedding and vector database concepts.
+* Develop AI services using commercial LLM APIs.
+* Execute the entire AI service development process through a team project.
+
+---
+
+### Ⅲ. Detailed Curriculum (10 Days / 80 Hours)
+
+### **Week 1: Deep Learning Fundamentals and Core Models**
+
+---
+
+#### **Day 1: Course Introduction & Development Environment**
+* Concepts and history of AI, Machine Learning, and Deep Learning
+* Usage of Google Colab (GPU, file system, commands)
+* Practice with Numpy, Pandas, and Matplotlib
+
+#### **Day 2: PyTorch Basics**
+* Understanding and operating on the Tensor data structure
+* Principles of Autograd and Gradient Descent
+* Implementing a Linear Regression model with PyTorch
+
+#### **Day 3: DNN (Deep Neural Network)**
+* MLP structure, activation functions, loss functions, optimizers
+* Causes and prevention of overfitting (Regularization, Dropout)
+* Building a DNN classification model (Dataset: Fashion MNIST)
+
+#### **Day 4: CNN (Convolutional Neural Network)**
+* Principles of Convolution and Pooling operations
+* Architectures of major CNNs (LeNet-5, VGGNet, ResNet)
+* Building a CNN classification model (Dataset: CIFAR-10)
+
+#### **Day 5: RNN (Recurrent Neural Network) & NLP Basics**
+* Structures of RNN, LSTM, GRU and sequential data processing
+* Text representation methods (Word Embedding - Word2Vec)
+* Implementing an LSTM-based text classification model (Dataset: IMDB movie reviews)
+
+<br>
+
+### **Week 2: Advanced Models and Service Development**
+
+---
+
+#### **Day 6: Sentence Embedding & Semantic Search**
+* Principles of context-based embedding (Sentence-BERT)
+* Concepts and applications of Vector Databases (Vector DB)
+* Implementing sentence similarity measurement and search with SBERT
+
+#### **Day 7: Transfer Learning & Fine-tuning**
+* Methods for image model transfer learning
+* Usage of the Hugging Face library (Transformers, Datasets)
+* Practice fine-tuning a Korean LLM using PEFT (LoRA) techniques
+
+#### **Day 8: Commercial LLM API Usage**
+* Architectures for API-based AI service development
+* Prompt Engineering techniques
+* Developing programs linked with commercial LLMs (OpenAI, Google API) for Q&A, summarization
+* Introduction to Generative Models (GANs) and MLOps
+
+#### **Day 9: Final Project - Development**
+* Topic selection and system design
+* Data collection/processing, model development, and feature implementation
+* Team-based technical mentoring and problem-solving
+
+#### **Day 10: Final Project - Presentation**
+* Model performance improvement and feature enhancement
+* Presentation of final team projects
+* Course wrap-up and Q&A
