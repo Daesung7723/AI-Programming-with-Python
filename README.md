@@ -174,7 +174,7 @@ This course uses PyTorch and Google Colab. Over two weeks, it covers deep learni
 
 
 
-# ຫຼັກສູດການພັດທະນາບໍລິການ AI ດ້ວຍ PyTorch ແລະ LLM (ສະບັບປັບປຸງ)
+# ຫຼັກສູດການພັດທະນາບໍລິການ AI ດ້ວຍ PyTorch ແລະ LLM
 
 ### I. ພາບລວມຂອງຫຼັກສູດ
 
