@@ -169,3 +169,87 @@ This course uses PyTorch and Google Colab. Over two weeks, it covers deep learni
 * Model performance improvement and feature enhancement
 * Presentation of final team projects
 * Course wrap-up and Q&A
+
+
+
+
+
+# ຫຼັກສູດການພັດທະນາບໍລິການ AI ດ້ວຍ PyTorch ແລະ LLM (ສະບັບປັບປຸງ)
+
+### I. ພາບລວມຂອງຫຼັກສູດ
+
+ຫຼັກສູດນີ້ໃຊ້ PyTorch ແລະ Google Colab. ໃນໄລຍະເວລາສອງອາທິດ, ຈະກວມເອົາທິດສະດີ deep learning, ການປັບແຕ່ງ LLM (fine-tuning), ແລະ ການນຳໃຊ້ API ທາງການຄ້າ, ເຊິ່ງລວມທັງຂະບວນການພັດທະນາບໍລິການ AI ທັງໝົດ. ເປົ້າໝາຍແມ່ນເພື່ອໃຫ້ນັກສຶກສາໄດ້ຮັບທັກສະໃນການພັດທະນາຊອບແວ AI ໃນລະດັບການຄ້າ.
+
+### II. ຈຸດປະສົງການຮຽນຮູ້
+
+* ສ້າງສະພາບແວດລ້ອມການພັດທະນາໂດຍໃຊ້ PyTorch ແລະ Google Colab.
+* ເຂົ້າໃຈ ແລະ ຈັດຕັ້ງປະຕິບັດໂຄງສ້າງໂມເດລ DNN, CNN, ແລະ RNN.
+* ປັບແຕ່ງໂມເດລພາສາ (fine-tune) ໂດຍໃຊ້ไลบรารี Hugging Face.
+* ເຂົ້າໃຈ ແລະ ນຳໃຊ້ແນວຄວາມຄິດຂອງ embedding ແລະ vector database.
+* ພັດທະນາບໍລິການ AI ໂດຍນຳໃຊ້ API ຂອງ LLM ທາງການຄ້າ.
+* ດຳເນີນການຂະບວນການພັດທະນາບໍລິການ AI ທັງໝົດຜ່ານໂຄງການກຸ່ມ.
+
+---
+
+### III. ຫຼັກສູດລະອຽດ (10 ມື້ / 80 ຊົ່ວໂມງ)
+
+### **ອາທິດທີ 1: ພື້ນຖານ Deep Learning ແລະ ໂມເດລຫຼັກ**
+
+---
+
+#### **ມື້ທີ 1: ແນະນຳຫຼັກສູດ ແລະ ສະພາບແວດລ້ອມການພັດທະນາ**
+* ແນວຄວາມຄິດ ແລະ ປະຫວັດຂອງ AI, Machine Learning, ແລະ Deep Learning
+* ການນຳໃຊ້ Google Colab (GPU, ລະບົບໄຟລ໌, ຄຳສັ່ງ)
+* ການຝຶກຫັດນຳໃຊ້ Numpy, Pandas, ແລະ Matplotlib
+
+#### **ມື້ທີ 2: ພື້ນຖານ PyTorch**
+* ຄວາມເຂົ້າໃຈ ແລະ ການດຳເນີນການກັບໂຄງສ້າງຂໍ້ມູນ Tensor
+* ຫຼັກການຂອງ Autograd ແລະ Gradient Descent
+* ການຈັດຕັ້ງປະຕິບັດໂມເດລ Linear Regression ດ້ວຍ PyTorch
+
+#### **ມື້ທີ 3: DNN (Deep Neural Network)**
+* ໂຄງສ້າງ MLP, activation functions, loss functions, optimizers
+* ສາເຫດ ແລະ ການປ້ອງກັນ overfitting (Regularization, Dropout)
+* ການສ້າງໂມເດລການຈັດປະເພດ DNN (ຊຸດຂໍ້ມູນ: Fashion MNIST)
+
+#### **ມື້ທີ 4: CNN (Convolutional Neural Network)**
+* ຫຼັກການຂອງການດຳເນີນການ Convolution ແລະ Pooling
+* ໂຄງສ້າງຂອງ CNN ທີ່ສຳຄັນ (LeNet-5, VGGNet, ResNet)
+* ການສ້າງໂມເດລການຈັດປະເພດ CNN (ຊຸດຂໍ້ມູນ: CIFAR-10)
+
+#### **ມື້ທີ 5: RNN (Recurrent Neural Network) & ພື້ນຖານ NLP**
+* ໂຄງສ້າງຂອງ RNN, LSTM, GRU ແລະ ການປະມວນຜົນຂໍ້ມູນຕາມລຳດັບ
+* ວິທີການສະແດງຂໍ້ຄວາມ (Word Embedding - Word2Vec)
+* ການຈັດຕັ້ງປະຕິບັດໂມເດລການຈັດປະເພດຂໍ້ຄວາມທີ່ອີງໃສ່ LSTM (ຊຸດຂໍ້ມູນ: IMDB movie reviews)
+
+<br>
+
+### **ອາທິດທີ 2: ໂມເດລຂັ້ນສູງ ແລະ ການພັດທະນາບໍລິການ**
+
+---
+
+#### **ມື້ທີ 6: Sentence Embedding & ການຄົ້ນຫາเชิงความหมาย**
+* ຫຼັກການຂອງ embedding ທີ່ອີງໃສ່ບໍລິບົດ (Sentence-BERT)
+* ແນວຄວາມຄິດ ແລະ ການນຳໃຊ້ Vector Databases (Vector DB)
+* ການຈັດຕັ້ງປະຕິບັດການວັດແທກຄວາມຄ້າຍຄືກັນຂອງປະໂຫຍກ ແລະ ການຄົ້ນຫາດ້ວຍ SBERT
+
+#### **ມື້ທີ 7: Transfer Learning & Fine-tuning**
+* ວິທີການສຳລັບ transfer learning ໂມເດລຮູບພາບ
+* ການນຳໃຊ້ไลบรารี Hugging Face (Transformers, Datasets)
+* ການຝຶກຫັດ fine-tuning LLM ພາສາເກົາຫຼີໂດຍໃຊ້ເຕັກນິກ PEFT (LoRA)
+
+#### **ມື້ທີ 8: ການນຳໃຊ້ Commercial LLM API**
+* ໂຄງສ້າງສຳລັບການພັດທະນາບໍລິການ AI ທີ່ອີງໃສ່ API
+* ເຕັກນິກ Prompt Engineering
+* ການພັດທະນາໂປຣແກຣມທີ່ເຊື່ອມໂຍງກັບ LLM ທາງການຄ້າ (OpenAI, Google API) ສຳລັບ Q&A, ການສະຫຼຸບຄວາມ
+* ການແນະນຳກ່ຽວກັບ Generative Models (GANs) ແລະ MLOps
+
+#### **ມື້ທີ 9: ໂຄງການສຸດທ້າຍ - ການພັດທະນາ**
+* การเลือกหัวข้อและการออกแบบระบบ
+* ການເກັບກຳ/ປະມວນຜົນຂໍ້ມູນ, ການພັດທະນາໂມເດລ, ແລະ ການຈັດຕັ້ງປະຕິບັດຄຸນສົມບັດ
+* ການໃຫ້ຄຳປຶກສາດ້ານເຕັກນິກແບບກຸ່ມ ແລະ ການແກ້ໄຂບັນຫາ
+
+#### **ມື້ທີ 10: ໂຄງການສຸດທ້າຍ - ການນຳສະເໜີ**
+* ການປັບປຸງປະສິດທິພາບຂອງໂມເດລ ແລະ ການເສີມສ້າງຄຸນສົມບັດ
+* ການນຳສະເໜີໂຄງການສຸດທ້າຍຂອງທີມ
+* ການສະຫຼຸບຫຼັກສູດ ແລະ ຖາມ-ຕອບ
