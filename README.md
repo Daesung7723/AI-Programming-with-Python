@@ -160,4 +160,93 @@ This course uses PyTorch and Google Colab. Over two weeks, participants will lea
 - Model performance improvement and feature enhancement
 - Team project outcome presentations
 - Course wrap-up and Q&A
-"""
+
+
+
+<br>
+<br>
+<br>
+
+# ຂັ້ນຕອນການພັດທະນາບໍລິການ AI ໂດຍອີງໃສ່ PyTorch ແລະ LLM
+
+
+### Ⅰ. ພາບລວມຂອງຫຼັກສູດ
+
+ຫຼັກສູດນີ້ໃຊ້ PyTorch ແລະ Google Colab. ໃນໄລຍະ 2 ອາທິດ, ທ່ານຈະຮຽນຮູ້ທິດສະດີ Deep Learning, LLM Fine-tuning, ວິທີການນໍາໃຊ້ Commercial API, ແລະກວມເອົາຂັ້ນຕອນທັງໝົດຂອງການພັດທະນາບໍລິການ AI. ເປົ້າໝາຍແມ່ນເພື່ອໃຫ້ນັກຮຽນມີຄວາມສາມາດໃນການພັດທະນາ Software AI ເຊິງເປັນທີ່ນິຍົມ.
+
+---
+
+### Ⅱ. ເປົ້າໝາຍການຮຽນຮູ້
+
+- ສ້າງສະພາບແວດລ້ອມການພັດທະນາໂດຍອີງໃສ່ PyTorch ແລະ Google Colab
+- ເຂົ້າໃຈແລະປະຕິບັດໂຄງສ້າງ Model ຂອງ DNN, CNN, RNN
+- Fine-tune Language Model ໂດຍອີງໃສ່ Hugging Face Library
+- ເຂົ້າໃຈແລະນໍາໃຊ້ແນວຄິດ Embedding ແລະ Vector Database
+- ພັດທະນາບໍລິການ AI ໂດຍນໍາໃຊ້ Commercial LLM API
+- ປະຕິບັດຂັ້ນຕອນທັງໝົດຂອງການພັດທະນາບໍລິການ AI ຜ່ານໂຄງການກຸ່ມ
+
+---
+
+### Ⅲ. ຫຼັກສູດ (10 ວັນ / 80 ຊົ່ວໂມງ)
+
+
+### **ອາທິດທີ 1: ພື້ນຖານ Deep Learning ແລະ Models ຫຼັກ**
+
+#### **ວັນທີ 1: ການແນະນຳຫຼັກສູດ ແລະ ສະພາບແວດລ້ອມການພັດທະນາ**
+- ແນວຄິດແລະປະຫວັດສາດຂອງ AI, Machine Learning, Deep Learning
+- ວິທີການນໍາໃຊ້ Google Colab (GPU, File System, ຄໍາສັ່ງ)
+- ຝຶກປະຕິບັດການນໍາໃຊ້ Numpy, Pandas, Matplotlib
+
+#### **ວັນທີ 2: ພື້ນຖານ PyTorch**
+- ເຂົ້າໃຈໂຄງສ້າງຂໍ້ມູນ Tensor ແລະການຄໍານວນ
+- ຫຼັກການຂອງ Autograd (ການຫາມະຕະພັນອັດຕະໂນມັດ) ແລະ Gradient Descent (ການຫຼຸດລະດັບຄວາມຊັນ)
+- ປະຕິບັດ Linear Regression Model ໂດຍອີງໃສ່ PyTorch
+
+#### **ວັນທີ 3: DNN (Deep Neural Network)**
+- ໂຄງສ້າງ Multi-layer Perceptron (MLP), Activation Function, Loss Function, Optimizer
+- ສາເຫດແລະເຕັກນິກການປ້ອງກັນ Overfitting (Regularization, Dropout)
+- ສ້າງ DNN Classification Model (Dataset: Fashion MNIST)
+
+#### **ວັນທີ 4: CNN (Convolutional Neural Network)**
+- ຫຼັກການຂອງການຄໍານວນ Convolution ແລະ Pooling
+- ໂຄງສ້າງສະຖາປັດຕະຍະກໍາ CNN ທີ່ສໍາຄັນ (LeNet-5, VGGNet, ResNet)
+- ສ້າງ CNN Classification Model (Dataset: CIFAR-10)
+
+#### **ວັນທີ 5: RNN (Recurrent Neural Network) ແລະ ພື້ນຖານ NLP**
+- ໂຄງສ້າງຂອງ RNN, LSTM, GRU ແລະການປະມວນຜົນຂໍ້ມູນຕາມລໍາດັບ
+- ວິທີການສະແດງຂໍ້ມູນຕົວອັກສອນ (Word Embedding - Word2Vec)
+- ປະຕິບັດ LSTM-based Text Classification Model (Dataset: IMDB Movie Reviews)
+
+
+### **ອາທິດທີ 2: Model ຂັ້ນສູງ ແລະ ການພັດທະນາບໍລິການ**
+
+#### **ວັນທີ 6: ການຝັງປະໂຫຍກ (Sentence Embedding) ແລະ ການຄົ້ນຫາຄວາມໝາຍ**
+- ຫຼັກການຂອງ Context-based Embedding (Sentence-BERT)
+- ແນວຄິດແລະການນໍາໃຊ້ Vector Database (Vector DB)
+- ປະຕິບັດການວັດແທກຄວາມຄ້າຍຄືກັນຂອງປະໂຫຍກແລະການຄົ້ນຫາໂດຍອີງໃສ່ SBERT
+
+#### **ວັນທີ 7: Transfer Learning ແລະ Fine-tuning**
+- ວິທີການ Transfer Learning ສໍາລັບ Image Model
+- ວິທີການນໍາໃຊ້ Hugging Face Library (Transformers, Datasets)
+- ຝຶກປະຕິບັດ LLM Fine-tuning ພາສາເກົາຫຼີໂດຍອີງໃສ່ເຕັກນິກ PEFT (LoRA)
+
+#### **ວັນທີ 8: ການນໍາໃຊ້ LLM API ເຊິງເປັນທີ່ນິຍົມ**
+- ສະຖາປັດຕະຍະກໍາການພັດທະນາບໍລິການ AI ໂດຍອີງໃສ່ API
+- ເຕັກນິກ Prompt Engineering
+- ພັດທະນາໂປຣແກຣມເຊື່ອມຕໍ່ກັບ Commercial LLM (OpenAI, Google API) (Q&A, Summarization)
+- ການແນະນໍາແນວຄິດ Generative Model (GAN), MLOps
+
+#### **ວັນທີ 9: ໂຄງການສຸດທ້າຍ - ການພັດທະນາ**
+- ການຄັດເລືອກຫົວຂໍ້ແລະການອອກແບບລະບົບ
+- ການເກັບກໍາແລະປະມວນຜົນຂໍ້ມູນ, ການພັດທະນາ Model ແລະການປະຕິບັດ Function
+- ການໃຫ້ຄໍາປຶກສາດ້ານເຕັກນິກແລະການແກ້ໄຂບັນຫາເປັນກຸ່ມ
+
+#### **ວັນທີ 10: ໂຄງການສຸດທ້າຍ - ການນໍາສະເໜີ**
+- ການປັບປຸງປະສິດທິພາບ Model ແລະການເພີ່ມເຕີມ Function
+- ການນໍາສະເໜີຜົນການພັດທະນາເປັນກຸ່ມ
+- ສະຫຼຸບຫຼັກສູດແລະການຖາມ-ຕອບ
+
+
+<br>
+<br>
+<br>
