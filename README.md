@@ -89,167 +89,139 @@
 - 과정 정리 및 질의응답
 
 
-
-# PyTorch LLM-based AI Service Development Course
-
-### Ⅰ. Course Overview
-
-This course uses PyTorch and Google Colab. Over two weeks, it covers deep learning theory, LLM fine-tuning, and commercial API usage, encompassing the entire AI service development process. The goal is for students to acquire commercial AI software development skills.
-
-### Ⅱ. Learning Objectives
-
-* Establish a development environment based on PyTorch and Google Colab.
-* Understand and implement DNN, CNN, and RNN model architectures.
-* Fine-tune language models using the Hugging Face library.
-* Understand and utilize embedding and vector database concepts.
-* Develop AI services using commercial LLM APIs.
-* Execute the entire AI service development process through a team project.
-
+---
 ---
 
-### Ⅲ. Detailed Curriculum (10 Days / 80 Hours)
+# PyTorch and LLM-based AI Service Development Course
+
+### I. Course Overview
+
+This is a 2-week (10 days, 80 hours) intensive AI service development training program that utilizes PyTorch and Google Colab. The course covers the entire process of AI service development, from core deep learning theories to fine-tuning the latest language models (LLMs) and developing services using commercial APIs. The goal is for students to acquire the skills necessary to develop commercial AI software.
+
+### II. Learning Objectives
+
+* Confidently build and use a deep learning development environment with PyTorch and Google Colab.
+
+* Understand the architecture of core deep learning models like DNN, CNN, and RNN, and be able to implement them directly.
+
+* Fine-tune the latest language models for specific purposes using the Hugging Face library.
+
+* Understand and utilize the concepts of embeddings and vector databases for semantic search systems.
+
+* Develop AI services with various features such as Q&A and summarization using commercial LLM APIs.
+
+* Experience the full cycle of AI service development, from ideation to final presentation, through a team project.
+
+### III. Detailed Curriculum (10 Days / 80 Hours)
 
 ### **Week 1: Deep Learning Fundamentals and Core Models**
 
----
+#### **Day 1: Course Introduction & Development Environment Setup**
 
-#### **Day 1: Course Introduction & Development Environment**
-* Concepts and history of AI, Machine Learning, and Deep Learning
-* Usage of Google Colab (GPU, file system, commands)
-* Practice with Numpy, Pandas, and Matplotlib
+* **Key Topics:** Concepts and historical development of AI, Machine Learning, and Deep Learning.
 
-#### **Day 2: PyTorch Basics**
-* Understanding and operating on the Tensor data structure
-* Principles of Autograd and Gradient Descent
-* Implementing a Linear Regression model with PyTorch
+* **Hands-on Practice:**
 
-#### **Day 3: DNN (Deep Neural Network)**
-* MLP structure, activation functions, loss functions, optimizers
-* Causes and prevention of overfitting (Regularization, Dropout)
-* Building a DNN classification model (Dataset: Fashion MNIST)
+  * Advanced Google Colab usage (GPU settings, file system integration, essential commands).
 
-#### **Day 4: CNN (Convolutional Neural Network)**
-* Principles of Convolution and Pooling operations
-* Architectures of major CNNs (LeNet-5, VGGNet, ResNet)
-* Building a CNN classification model (Dataset: CIFAR-10)
+  * Core functionalities of Numpy, Pandas, and Matplotlib libraries.
+
+#### **Day 2: PyTorch Fundamentals**
+
+* **Key Topics:**
+
+  * Understanding and operating on Tensors, the core data structure of PyTorch.
+
+  * Principles of the Autograd system and Gradient Descent.
+
+* **Hands-on Practice:** Implementing a Linear Regression model from scratch using PyTorch.
+
+#### **Day 3: Mastering DNN (Deep Neural Network)**
+
+* **Key Topics:**
+
+  * Structure of Multi-Layer Perceptrons (MLP), types and roles of activation functions, loss functions, and optimizers.
+
+  * Causes of and solutions for Overfitting (Regularization, Dropout).
+
+* **Hands-on Practice:** Building a DNN image classification model using the Fashion MNIST dataset.
+
+#### **Day 4: Conquering CNN (Convolutional Neural Network)**
+
+* **Key Topics:**
+
+  * Principles of Convolution and Pooling operations and their role in visual data processing.
+
+  * Comparison of structural features of major CNN architectures (LeNet-5, VGGNet, ResNet).
+
+* **Hands-on Practice:** Building a CNN image classification model using the CIFAR-10 dataset.
 
 #### **Day 5: RNN (Recurrent Neural Network) & NLP Basics**
-* Structures of RNN, LSTM, GRU and sequential data processing
-* Text representation methods (Word Embedding - Word2Vec)
-* Implementing an LSTM-based text classification model (Dataset: IMDB movie reviews)
 
-<br>
+* **Key Topics:**
+
+  * Structures of RNN, LSTM, and GRU and their methods for processing sequential data.
+
+  * Text data representation for Natural Language Processing (Word Embedding - Word2Vec).
+
+* **Hands-on Practice:** Implementing an LSTM-based text sentiment classification model using the IMDB movie review dataset.
 
 ### **Week 2: Advanced Models and Service Development**
 
----
+#### **Day 6: Sentence Embedding and Semantic Search**
 
-#### **Day 6: Sentence Embedding & Semantic Search**
-* Principles of context-based embedding (Sentence-BERT)
-* Concepts and applications of Vector Databases (Vector DB)
-* Implementing sentence similarity measurement and search with SBERT
+* **Key Topics:**
 
-#### **Day 7: Transfer Learning & Fine-tuning**
-* Methods for image model transfer learning
-* Usage of the Hugging Face library (Transformers, Datasets)
-* Practice fine-tuning a Korean LLM using PEFT (LoRA) techniques
+  * Principles of context-aware embedding models (Sentence-BERT).
 
-#### **Day 8: Commercial LLM API Usage**
-* Architectures for API-based AI service development
-* Prompt Engineering techniques
-* Developing programs linked with commercial LLMs (OpenAI, Google API) for Q&A, summarization
-* Introduction to Generative Models (GANs) and MLOps
+  * Vector Databases for efficient storage and retrieval of large-scale vector data.
+
+* **Hands-on Practice:** Implementing sentence similarity measurement and a semantic search feature using Sentence-BERT.
+
+#### **Day 7: Transfer Learning & LLM Fine-Tuning**
+
+* **Key Topics:**
+
+  * Transfer Learning techniques using pre-trained image models.
+
+  * Essential usage of the Hugging Face ecosystem (Transformers, Datasets).
+
+  * Efficient model tuning with PEFT (Parameter-Efficient Fine-Tuning) and LoRA techniques.
+
+* **Hands-on Practice:** Fine-tuning a pre-trained Korean LLM for a specific domain.
+
+#### **Day 8: Developing Services with Commercial LLM APIs**
+
+* **Key Topics:**
+
+  * Architectural design for API-based AI services.
+
+  * Prompt Engineering techniques to maximize LLM performance.
+
+  * Introduction to Generative Models (GANs) and MLOps concepts.
+
+* **Hands-on Practice:** Developing Q&A and text summarization programs by integrating commercial LLM APIs (e.g., OpenAI, Google).
 
 #### **Day 9: Final Project - Development**
-* Topic selection and system design
-* Data collection/processing, model development, and feature implementation
-* Team-based technical mentoring and problem-solving
 
-#### **Day 10: Final Project - Presentation**
-* Model performance improvement and feature enhancement
-* Presentation of final team projects
-* Course wrap-up and Q&A
+* **Key Topics:** Team-based AI service development project.
 
+* **Activities:**
 
+  * Project theme selection and system architecture design.
 
+  * Data collection, preprocessing, model development, and core feature implementation.
 
+  * Problem-solving and development guidance through team-specific technical mentoring.
 
-# ຫຼັກສູດການພັດທະນາບໍລິການ AI ດ້ວຍ PyTorch ແລະ LLM
+#### **Day 10: Final Project - Presentation & Wrap-up**
 
-### I. ພາບລວມຂອງຫຼັກສູດ
+* **Key Topics:** Project showcase and course conclusion.
 
-ຫຼັກສູດນີ້ໃຊ້ PyTorch ແລະ Google Colab. ໃນໄລຍະເວລາສອງອາທິດ, ຈະກວມເອົາທິດສະດີ deep learning, ການປັບແຕ່ງ LLM (fine-tuning), ແລະ ການນຳໃຊ້ API ທາງການຄ້າ, ເຊິ່ງລວມທັງຂະບວນການພັດທະນາບໍລິການ AI ທັງໝົດ. ເປົ້າໝາຍແມ່ນເພື່ອໃຫ້ນັກສຶກສາໄດ້ຮັບທັກສະໃນການພັດທະນາຊອບແວ AI ໃນລະດັບການຄ້າ.
+* **Activities:**
 
-### II. ຈຸດປະສົງການຮຽນຮູ້
+  * Improving the performance of the developed model and enhancing service features.
 
-* ສ້າງສະພາບແວດລ້ອມການພັດທະນາໂດຍໃຊ້ PyTorch ແລະ Google Colab.
-* ເຂົ້າໃຈ ແລະ ຈັດຕັ້ງປະຕິບັດໂຄງສ້າງໂມເດລ DNN, CNN, ແລະ RNN.
-* ປັບແຕ່ງໂມເດລພາສາ (fine-tune) ໂດຍໃຊ້ไลบรารี Hugging Face.
-* ເຂົ້າໃຈ ແລະ ນຳໃຊ້ແນວຄວາມຄິດຂອງ embedding ແລະ vector database.
-* ພັດທະນາບໍລິການ AI ໂດຍນຳໃຊ້ API ຂອງ LLM ທາງການຄ້າ.
-* ດຳເນີນການຂະບວນການພັດທະນາບໍລິການ AI ທັງໝົດຜ່ານໂຄງການກຸ່ມ.
+  * Final presentation and demo of each team's project.
 
----
-
-### III. ຫຼັກສູດລະອຽດ (10 ມື້ / 80 ຊົ່ວໂມງ)
-
-### **ອາທິດທີ 1: ພື້ນຖານ Deep Learning ແລະ ໂມເດລຫຼັກ**
-
----
-
-#### **ມື້ທີ 1: ແນະນຳຫຼັກສູດ ແລະ ສະພາບແວດລ້ອມການພັດທະນາ**
-* ແນວຄວາມຄິດ ແລະ ປະຫວັດຂອງ AI, Machine Learning, ແລະ Deep Learning
-* ການນຳໃຊ້ Google Colab (GPU, ລະບົບໄຟລ໌, ຄຳສັ່ງ)
-* ການຝຶກຫັດນຳໃຊ້ Numpy, Pandas, ແລະ Matplotlib
-
-#### **ມື້ທີ 2: ພື້ນຖານ PyTorch**
-* ຄວາມເຂົ້າໃຈ ແລະ ການດຳເນີນການກັບໂຄງສ້າງຂໍ້ມູນ Tensor
-* ຫຼັກການຂອງ Autograd ແລະ Gradient Descent
-* ການຈັດຕັ້ງປະຕິບັດໂມເດລ Linear Regression ດ້ວຍ PyTorch
-
-#### **ມື້ທີ 3: DNN (Deep Neural Network)**
-* ໂຄງສ້າງ MLP, activation functions, loss functions, optimizers
-* ສາເຫດ ແລະ ການປ້ອງກັນ overfitting (Regularization, Dropout)
-* ການສ້າງໂມເດລການຈັດປະເພດ DNN (ຊຸດຂໍ້ມູນ: Fashion MNIST)
-
-#### **ມື້ທີ 4: CNN (Convolutional Neural Network)**
-* ຫຼັກການຂອງການດຳເນີນການ Convolution ແລະ Pooling
-* ໂຄງສ້າງຂອງ CNN ທີ່ສຳຄັນ (LeNet-5, VGGNet, ResNet)
-* ການສ້າງໂມເດລການຈັດປະເພດ CNN (ຊຸດຂໍ້ມູນ: CIFAR-10)
-
-#### **ມື້ທີ 5: RNN (Recurrent Neural Network) & ພື້ນຖານ NLP**
-* ໂຄງສ້າງຂອງ RNN, LSTM, GRU ແລະ ການປະມວນຜົນຂໍ້ມູນຕາມລຳດັບ
-* ວິທີການສະແດງຂໍ້ຄວາມ (Word Embedding - Word2Vec)
-* ການຈັດຕັ້ງປະຕິບັດໂມເດລການຈັດປະເພດຂໍ້ຄວາມທີ່ອີງໃສ່ LSTM (ຊຸດຂໍ້ມູນ: IMDB movie reviews)
-
-<br>
-
-### **ອາທິດທີ 2: ໂມເດລຂັ້ນສູງ ແລະ ການພັດທະນາບໍລິການ**
-
----
-
-#### **ມື້ທີ 6: Sentence Embedding & ການຄົ້ນຫາเชิงความหมาย**
-* ຫຼັກການຂອງ embedding ທີ່ອີງໃສ່ບໍລິບົດ (Sentence-BERT)
-* ແນວຄວາມຄິດ ແລະ ການນຳໃຊ້ Vector Databases (Vector DB)
-* ການຈັດຕັ້ງປະຕິບັດການວັດແທກຄວາມຄ້າຍຄືກັນຂອງປະໂຫຍກ ແລະ ການຄົ້ນຫາດ້ວຍ SBERT
-
-#### **ມື້ທີ 7: Transfer Learning & Fine-tuning**
-* ວິທີການສຳລັບ transfer learning ໂມເດລຮູບພາບ
-* ການນຳໃຊ້ไลบรารี Hugging Face (Transformers, Datasets)
-* ການຝຶກຫັດ fine-tuning LLM ພາສາເກົາຫຼີໂດຍໃຊ້ເຕັກນິກ PEFT (LoRA)
-
-#### **ມື້ທີ 8: ການນຳໃຊ້ Commercial LLM API**
-* ໂຄງສ້າງສຳລັບການພັດທະນາບໍລິການ AI ທີ່ອີງໃສ່ API
-* ເຕັກນິກ Prompt Engineering
-* ການພັດທະນາໂປຣແກຣມທີ່ເຊື່ອມໂຍງກັບ LLM ທາງການຄ້າ (OpenAI, Google API) ສຳລັບ Q&A, ການສະຫຼຸບຄວາມ
-* ການແນະນຳກ່ຽວກັບ Generative Models (GANs) ແລະ MLOps
-
-#### **ມື້ທີ 9: ໂຄງການສຸດທ້າຍ - ການພັດທະນາ**
-* การเลือกหัวข้อและการออกแบบระบบ
-* ການເກັບກຳ/ປະມວນຜົນຂໍ້ມູນ, ການພັດທະນາໂມເດລ, ແລະ ການຈັດຕັ້ງປະຕິບັດຄຸນສົມບັດ
-* ການໃຫ້ຄຳປຶກສາດ້ານເຕັກນິກແບບກຸ່ມ ແລະ ການແກ້ໄຂບັນຫາ
-
-#### **ມື້ທີ 10: ໂຄງການສຸດທ້າຍ - ການນຳສະເໜີ**
-* ການປັບປຸງປະສິດທິພາບຂອງໂມເດລ ແລະ ການເສີມສ້າງຄຸນສົມບັດ
-* ການນຳສະເໜີໂຄງການສຸດທ້າຍຂອງທີມ
-* ການສະຫຼຸບຫຼັກສູດ ແລະ ຖາມ-ຕອບ
+  * Course review and Q&A session.
