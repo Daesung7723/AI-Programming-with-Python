@@ -42,6 +42,10 @@
 - 내 구글 드라이브를 코랩 환경에 연결하려면 아래 `[CODE-2]`를 실행합니다.
 
 `[CODE-2]`
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
 
 ## 4. 데이터 분석을 위한 파이썬 핵심 라이브러리 실습
 
@@ -50,12 +54,35 @@
 - 아래 `[CODE-3]`으로 실습합니다.
 
 `[CODE-3]`
+```python
+import numpy as np
+
+arr1 = np.array([1, 2, 3, 4, 5])
+print(f"1차원 배열: {arr1}")
+
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+print(f"2차원 배열:\n{arr2}")
+
+print(f"arr2 형태: {arr2.shape}")
+```
 
 ### 4-2. Pandas (판다스): 데이터 가공 및 분석의 핵심
 - 행과 열로 이루어진 테이블 형태의 데이터를 다루는 데 특화된 라이브러리입니다.
 - 아래 `[CODE-4]`로 실습합니다.
 
 `[CODE-4]`
+```python
+import pandas as pd
+
+data = {
+    '이름': ['김교수', '이학생', '박조교', '최박사'],
+    '나이': [45, 24, 31, 52],
+    '전공': ['AI', '경영', '컴퓨터공학', 'AI']
+}
+df = pd.DataFrame(data)
+print("생성된 DataFrame:")
+print(df)
+```
 
 ### 4-3. Matplotlib (맷플롯립): 데이터 시각화의 표준
 - 데이터를 그래프나 차트로 시각화하여 직관적으로 이해할 수 있게 돕는 라이브러리입니다.
@@ -65,11 +92,39 @@
 - **아래 `[CODE-5]`를 실행한 후에는 반드시 [런타임] -> [런타임 다시 시작]을 눌러주세요.**
 
 `[CODE-5]`
+```python
+!sudo apt-get install -y fonts-nanum
+!sudo fc-cache -fv
+!rm ~/.cache/matplotlib -rf
+```
+
 
 #### 그래프 그리기
 - 런타임 다시 시작 후, 아래 `[CODE-6]`을 실행하여 그래프를 확인합니다.
 
 `[CODE-6]`
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 한글 폰트 설정
+plt.rc('font', family='NanumBarunGothic') 
+
+# 데이터 준비
+x = np.arange(1, 11)
+y = x * 2
+
+# 선 그래프 그리기
+plt.figure(figsize=(10, 4))
+plt.plot(x, y, 'go--', label='가격')
+plt.title('월별 가격 변동')
+plt.xlabel('월(Month)')
+plt.ylabel('가격(Price)')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 
 ## 5. 학습 성취도 확인 및 응용
 
@@ -92,6 +147,38 @@
 - **실습 안내:** 아래 `[CODE-7]`을 복사하여 Colab 셀에 붙여넣고 실행해봅니다.
 
 `[CODE-7]`
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# STEP 1: 이 셀을 실행하여 샘플 데이터(seoul_population.csv)를 생성하세요.
+%%writefile seoul_population.csv
+자치구,인구수,면적
+강남구,547453,39.5
+서초구,423340,46.9
+송파구,673926,33.8
+강동구,469496,24.5
+마포구,382494,23.8
+영등포구,404595,24.5
+강서구,585901,41.4
+
+# STEP 2: 데이터를 읽고 분석, 시각화하는 코드입니다.
+# 런타임을 다시 시작했다면 폰트 설정을 다시 해야 합니다.
+plt.rc('font', family='NanumBarunGothic') 
+
+df_seoul = pd.read_csv('seoul_population.csv')
+df_sorted = df_seoul.sort_values(by='인구수', ascending=False)
+
+plt.figure(figsize=(12, 6))
+plt.bar(df_sorted['자치구'], df_sorted['인구수'], color='dodgerblue')
+plt.title('서울시 주요 자치구별 인구수', fontsize=16)
+plt.xlabel('자치구', fontsize=12)
+plt.ylabel('인구수 (명)', fontsize=12)
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
+```
+
 
 ## 6. 정리 및 다음 차시 예고
 
