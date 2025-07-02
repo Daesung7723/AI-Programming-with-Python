@@ -6,8 +6,7 @@
 
 본 보고서는 'PyTorch 및 LLM 기반 AI 서비스 개발 과정'의 1주 1일차 강의 자료를 상세하게 다룹니다. 이 과정은 수강생이 파이토치(PyTorch)와 구글 코랩(Google Colab)을 활용하여 딥러닝 이론, LLM 파인튜닝, 상용 API 활용법, 그리고 AI 서비스 개발의 전 과정을 2주 동안 학습하도록 설계되었습니다.1 궁극적으로 수강생은 상용 AI 소프트웨어 개발 능력을 갖추는 것을 목표로 합니다.1
 
-![구글 로고](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
-
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="구글 로고" width="200">
 
 ### **1.1. 과정 개요 및 학습 목표**
 
