@@ -161,10 +161,10 @@ Google Colab의 주요 장점은 다음과 같습니다:
 Colab에서 Google Drive에 저장된 데이터나 모델에 접근하려면 Drive를 마운트해야 합니다.
 
 1. Colab 노트북의 코드 셀에 다음 파이썬 코드를 입력하고 실행합니다 16:  
-   Python ''' 
+   ```python
    from google.colab import drive  
    drive.mount('/content/gdrive')
-'''
+```
 2. 실행 후 나타나는 링크를 클릭하여 Google 계정을 선택하고 인증 절차를 완료합니다.  
 3. 발급된 인증 키(authorization code)를 Colab의 입력창에 붙여넣고 엔터를 누르면 Google Drive가 Colab 환경에 마운트됩니다.16  
 4. 마운트 성공 후, /content/gdrive/MyDrive 경로를 통해 자신의 Google Drive 폴더에 접근할 수 있습니다.23 외부 파일을 사용하고 싶을 경우, Google Drive에 업로드하여 이 경로를 통해 접근하면 됩니다.24
