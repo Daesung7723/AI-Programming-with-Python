@@ -295,7 +295,7 @@ Pandas는 데이터프레임(DataFrame)을 중심으로 데이터를 효율적�
 
 Matplotlib은 데이터를 시각적으로 표현하여 패턴과 추세를 쉽게 파악할 수 있도록 돕습니다.
 
-Python
+```Python
 
 import matplotlib.pyplot as plt  
 import numpy as np  
@@ -368,7 +368,7 @@ plt.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=True, s
 plt.title('Fruit Distribution')  
 plt.axis('equal') \# 원형 유지  
 plt.show()
-
+```
 ### **4.3. 학습내용 확인: 라이브러리 활용 능력 점검 문제**
 
 1. **Numpy 배열 생성 및 연산:**  
