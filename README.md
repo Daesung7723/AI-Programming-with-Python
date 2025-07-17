@@ -1,252 +1,201 @@
-# 파이토치 및 LLM 기반 AI 서비스 개발 과정
+## **과정 소개**
 
+* **과정 개요:** AI 프로그래밍을 처음 접하는 공학도 대상, 10일간의 집중 교육을 통해 간단한 AI 모델 및 API 기반 애플리케이션 제작 역량을 갖추도록 설계된 종합 커리큘럼.  
+* **궁극적 목표:** 단순 도구 사용법 학습을 넘어, AI 모델의 작동 원리에 대한 깊이 있는 이해와 실제 문제 해결 능력을 겸비한 'AI 개발자' 양성.
 
-### Ⅰ. 과정 개요
+### **과정 철학 및 목표**
 
-본 과정은 파이토치(PyTorch)와 구글 코랩(Google Colab)을 사용한다. 2주 동안 딥러닝 이론, LLM 파인튜닝, 상용 API 활용법을 학습하고 AI 서비스 개발 전체 과정을 다룬다. 수강생의 상용 AI 소프트웨어 개발 능력 확보를 목표로 한다.
+* **교육 철학:** 이론(40%)과 실습(60%)의 유기적인 결합을 통한 균형 있는 학습.  
+* **학습 방향:** 기술의 '왜(Why)'와 '어떻게(How)'를 모두 체득하여, 변화하는 기술 환경에 능동적으로 대처하고 스스로 문제를 해결하는 능력 배양.  
+* **최종 교육 목표:**  
+  1. PyTorch 프레임워크를 활용하여 CNN, RNN 등 핵심 딥러닝 모델을 직접 구현하고 학습시키는 능력 배양.  
+  2. Google Gemini API를 활용하여 텍스트 생성, 이미지 분석 등 고도화된 AI 기능을 애플리케이션에 통합하는 능력 확보.  
+  3. 팀 프로젝트를 통해 실제 작동하는 AI 기반 애플리케이션을 기획부터 개발, 발표까지 완료하는 실무 경험 습득.
 
----
+### **기술 스택 및 학습 환경**
 
-### Ⅱ. 학습 목표
+* **주요 언어:** Python  
+* **핵심 라이브러리:** NumPy, Pandas, Matplotlib, Seaborn, PyTorch  
+* **개발 환경:** Google Colab.  
+  * 별도의 로컬 환경 설정 불필요, 웹 브라우저만으로 실습 참여.  
+  * 무료 GPU 지원을 통해 복잡한 딥러닝 모델 학습 시간 단축 및 학습 집중도 향상.  
+* **API 및 애플리케이션:** Google Gemini API, Streamlit.  
+  * Streamlit: Python 코드만으로 빠르게 인터랙티브 웹 애플리케이션을 제작, AI 모델을 서비스로 만드는 경험 제공.
 
-- 파이토치, 구글 코랩 기반 개발 환경 구축
-- DNN, CNN, RNN 모델 구조 이해 및 구현
-- Hugging Face 라이브러리 기반 언어 모델 파인튜닝
-- 임베딩 및 벡터 데이터베이스 개념 이해와 활용
-- 상용 LLM API 활용 AI 서비스 개발
-- 팀 프로젝트를 통한 AI 서비스 개발 과정 전체 수행
+### **10일 AI 프로그래밍 교육과정 전체 일정표**
 
----
-
-### Ⅲ. 교육 과정 (10일 / 80시간)
-
-
-### **1주차: 딥러닝 기초 및 핵심 모델**
-
-#### **1일차: 과정 소개 및 개발 환경**
-- AI, 머신러닝, 딥러닝 개념 및 역사
-- 구글 Colab 사용법 (GPU, 파일 시스템, 명령어)
-- Numpy, Pandas, Matplotlib 사용법 실습
-
-#### **2일차: 파이토치 기본**
-- 텐서(Tensor) 자료구조 이해 및 연산
-- 자동 미분(Autograd)과 경사하강법(Gradient Descent) 원리
-- 파이토치 기반 선형 회귀(Linear Regression) 모델 구현
-
-#### **3일차: DNN (심층 신경망)**
-- 다층 퍼셉트론(MLP) 구조, 활성화 함수, 손실 함수, 옵티마이저
-- 과적합(Overfitting) 원인 및 방지 기법 (Regularization, Dropout)
-- DNN 분류 모델 구축 (데이터셋: 패션 MNIST)
-
-#### **4일차: CNN (합성곱 신경망)**
-- 합성곱(Convolution), 풀링(Pooling) 연산 원리
-- 주요 CNN 아키텍처 구조 (LeNet-5, VGGNet, ResNet)
-- CNN 분류 모델 구축 (데이터셋: CIFAR-10)
-
-#### **5일차: RNN (순환 신경망) 및 NLP 기초**
-- RNN, LSTM, GRU 구조 및 순차 데이터 처리
-- 텍스트 데이터 표현법 (단어 임베딩 - Word2Vec)
-- LSTM 기반 텍스트 분류 모델 구현 (데이터셋: IMDB 영화 리뷰)
-
-
-### **2주차: 모델 심화 및 서비스 개발**
-
-#### **6일차: 문장 임베딩 및 의미 검색**
-- 문맥 기반 임베딩 (Sentence-BERT) 원리
-- 벡터 데이터베이스(Vector DB) 개념 및 용도
-- SBERT 기반 문장 유사도 측정 및 검색 기능 구현
-
-#### **7일차: 전이 학습 및 파인튜닝**
-- 이미지 모델 전이 학습(Transfer Learning) 방법
-- Hugging Face 라이브러리(Transformers, Datasets) 사용법
-- PEFT(LoRA) 기법 기반 한국어 LLM 파인튜닝 실습
-
-#### **8일차: 상용 LLM API 활용**
-- API 기반 AI 서비스 개발 아키텍처
-- Prompt Engineering 기법
-- 상용 LLM (OpenAI, Google API) 연동 프로그램 개발 (Q&A, 요약)
-- 생성 모델(GAN), MLOps 개념 소개
-
-#### **9일차: 최종 프로젝트 - 개발**
-- 주제 선정 및 시스템 설계
-- 데이터 수집 및 처리, 모델 개발 및 기능 구현
-- 팀별 기술 멘토링 및 문제 해결
-
-#### **10일차: 최종 프로젝트 - 발표**
-- 모델 성능 개선 및 기능 보완
-- 팀별 개발 결과물 발표
-- 과정 정리 및 질의응답
-
-
-<br>
-<br>
-<br>
-
-# PyTorch and LLM-based AI Service Development Course
-
-
-### Ⅰ. Course Overview
-
-This course uses PyTorch and Google Colab. Over two weeks, participants will learn deep learning theory, LLM fine-tuning, and how to utilize commercial APIs, covering the entire AI service development process. The goal is to equip students with the skills to develop commercial AI software.
+| 일차 | 오전 세션 (09:00-12:00) | 오후 세션 (13:00-18:00) | 핵심 학습 목표 | 주요 실습 |
+| :---- | :---- | :---- | :---- | :---- |
+| **1일차** | **이론:** AI의 큰 그림과 머신러닝 워크플로우 | **실습:** 수치 연산의 핵심, NumPy | AI, ML, DL의 관계 이해 및 벡터화 연산의 중요성 체득 | NumPy ndarray 생성, 조작 및 벡터화 연산 실습 |
+| **2일차** | **실습:** 데이터 조작의 연금술, Pandas | **실습:** 데이터 시각화, Matplotlib & Seaborn | 데이터 정제 및 탐색적 데이터 분석(EDA) 능력 배양 | 실제 데이터를 활용한 데이터 클리닝 및 시각화 |
+| **3일차** | **이론/실습:** PyTorch의 심장, 텐서(Tensor) | **이론/실습:** 자동 미분의 마법, torch.autograd | GPU 기반 텐서 연산 및 딥러닝 학습 원리(역전파) 이해 | 선형 회귀 모델 수동 구현 및 그래디언트 계산 |
+| **4일차** | **이론/실습:** 모델의 뼈대, nn.Module | **이론/실습:** 학습의 엔진, 옵티마이저와 데이터로더 | PyTorch를 이용한 신경망 구축 및 학습 파이프라인 완성 | nn.Module과 DataLoader를 활용한 학습 루프 구현 |
+| **5일차** | **이론:** 이미지를 보는 눈, CNN | **실습:** CIFAR-10 이미지 분류기 제작 | CNN의 구조(합성곱, 풀링)와 작동 원리 이해 | torchvision과 nn.Conv2d를 사용한 CNN 모델링 |
+| **6일차** | **이론:** 시간의 흐름을 읽다, RNN/LSTM | **실습:** 문자 단위 RNN으로 국적 분류하기 | 순차 데이터 처리와 RNN/LSTM의 장기 의존성 문제 해결 방식 이해 | 가변 길이 텍스트 데이터를 처리하는 RNN 모델링 |
+| **7일차** | **이론:** 거인의 어깨 위에서, 트랜스포머 & 어텐션 | **실습:** Gemini API 첫걸음 | 트랜스포머와 셀프 어텐션 메커니즘의 개념적 이해 | Gemini API를 활용한 텍스트 생성 및 멀티모달 입력 처리 |
+| **8일차** | **실습:** Python으로 웹 UI 만들기, Streamlit | **실습:** Gemini API 연동 대화형 챗봇 제작 | AI 모델을 서비스로 배포하기 위한 웹 애플리케이션 개발 능력 습득 | st.session\_state를 활용한 대화형 챗봇 구현 |
+| **9일차** | **프로젝트:** 최종 프로젝트 기획 및 개발 스프린트 1 | **프로젝트:** 개발 스프린트 1 (계속) | 팀 협업을 통한 실전 AI 애플리케이션 기획 및 핵심 기능 개발 | 팀별 프로젝트 아키텍처 설계 및 역할 분담, 개발 착수 |
+| **10일차** | **프로젝트:** 개발 스프린트 2 및 발표 준비 | **프로젝트:** 최종 발표 및 과정 수료 | 프로젝트 완성, 발표 및 동료/강사 피드백을 통한 종합 역량 강화 | 팀별 프로젝트 결과물 발표 및 시연, 과정 회고 |
 
 ---
 
-### Ⅱ. Learning Objectives
+## **일자별 상세 강의 계획**
 
-- Build a development environment based on PyTorch and Google Colab
-- Understand and implement DNN, CNN, and RNN model structures
-- Fine-tune language models using the Hugging Face library
-- Understand and utilize the concepts of embeddings and vector databases
-- Develop AI services using commercial LLM APIs
-- Perform the entire AI service development process through a team project
+### **1일차: AI의 초석 \- 데이터 과학을 위한 Python 마스터하기**
 
----
+* **오전 (09:00-12:00) \- 이론: 인공지능의 큰 그림과 머신러닝 워크플로우**  
+  * **목표:** 전체 AI 개발 프로세스 내 기술의 위치를 파악하여 학습 동기 부여 및 지식 체계화.  
+  * **내용:**  
+    * **AI, ML, DL 관계:** AI \> ML \> DL 포함 관계 정의 및 명확화.  
+    * **학습 방식 분류:** 지도학습, 비지도학습, 강화학습의 개념 및 대표 예시 소개.  
+    * **ML 프로젝트 생명주기:** 문제 정의부터 배포까지 이어지는 6단계 워크플로우 설명.  
+* **오후 (13:00-18:00) \- 실습: 수치 연산의 핵심, NumPy**  
+  * **목표:** 딥러닝의 기반이 되는 대규모 수치 데이터를 빠르고 효율적으로 다루는 NumPy 마스터.  
+  * **내용:**  
+    * **NumPy 필요성:** Python 리스트 대비 '벡터화(vectorized) 연산'을 통한 압도적 성능 제공. (PyTorch 텐서 연산의 기초)  
+    * **핵심 기능 실습:**  
+      * ndarray 생성(np.array, np.zeros 등) 및 조작(reshape).  
+      * 인덱싱 및 슬라이싱.  
+      * 벡터화 연산(+, \-, \*, /) 및 브로드캐스팅 규칙 이해.  
+      * 불리언 마스킹을 이용한 조건부 데이터 추출.
 
-### Ⅲ. Curriculum (10 days / 80 hours)
+### **2일차: 데이터 길들이기 \- Pandas와 Matplotlib**
 
+* **오전 (09:00-12:00) \- 실습: 데이터 조작의 연금술, Pandas**  
+  * **목표:** 정형 데이터의 로딩, 정제, 가공에 필수적인 Pandas 라이브러리 마스터.  
+  * **내용:**  
+    * **핵심 자료구조:** Series(1차원), DataFrame(2차원) 생성 및 기본 조작.  
+    * **데이터 입출력:** pd.read\_csv, pd.read\_excel 등 파일 입출력.  
+    * **데이터 정제:** 결측치 처리(isnull, dropna, fillna), 데이터 타입 변환(to\_datetime).  
+    * **데이터 선택/가공:** loc/iloc 인덱서를 이용한 정밀 선택, 조건 필터링, groupby를 이용한 그룹화 및 집계(sum, mean, agg).  
+* **오후 (13:00-18:00) \- 실습: 데이터에 생명 불어넣기, Matplotlib & Seaborn 시각화**  
+  * **목표:** 데이터에 숨겨진 패턴과 인사이트를 발견하는 시각화 능력 배양.  
+  * **내용:**  
+    * **Matplotlib 기초:** 선 그래프(plot), 막대 그래프(bar), 산점도(scatter), 히스토그램(hist) 등 기본 그래프 작성 및 커스터마이징.  
+    * **Seaborn 활용:** 더 적은 코드로 미려하고 통계적인 그래프 작성.  
+    * **탐색적 데이터 분석(EDA):** 정제된 데이터를 바탕으로 변수 분포(히스토그램, 박스 플롯), 변수 간 관계(산점도, 히트맵)를 시각화하여 인사이트 도출.
 
-### **Week 1: Deep Learning Fundamentals and Core Models**
+### **3일차: 딥러닝의 문을 열다 \- PyTorch 기초**
 
-#### **Day 1: Course Introduction and Development Environment**
-- Concepts and history of AI, Machine Learning, Deep Learning
-- How to use Google Colab (GPU, file system, commands)
-- Hands-on practice using Numpy, Pandas, Matplotlib
+* **오전 (09:00-12:00) \- 이론 및 실습: PyTorch의 심장, 텐서(Tensor)**  
+  * **목표:** GPU 가속 연산이 가능한 PyTorch의 핵심 자료구조 텐서의 개념과 사용법 숙지.  
+  * **내용:**  
+    * **텐서 개념:** NumPy ndarray와 유사한 다차원 배열, GPU 연산 지원으로 대규모 병렬 계산에 특화.  
+    * **텐서 생성/조작:** torch.tensor, torch.randn 등 생성 함수 및 인덱싱, 슬라이싱, view(reshape) 실습.  
+    * **GPU 활용:** .to('cuda') 메소드를 이용, 텐서를 GPU로 이동시켜 연산 가속 체험.  
+* **오후 (13:00-18:00) \- 이론 및 실습: 자동 미분의 마법, torch.autograd**  
+  * **목표:** 딥러닝 학습의 핵심 원리인 역전파와 자동 미분 기능 autograd 이해.  
+  * **내용:**  
+    * **딥러닝 학습 원리:**  
+      * **경사하강법:** 손실(loss)을 최소화하는 방향(기울기)으로 파라미터를 업데이트하는 과정.  
+      * **역전파:** 출력층에서부터 각 파라미터의 기울기를 연쇄 법칙으로 효율적으로 계산하는 알고리즘.1  
+    * **autograd 실습:**  
+      * requires\_grad=True: 텐서의 연산을 추적하여 기울기 계산을 활성화.  
+      * loss.backward(): 손실로부터 역전파를 자동 수행, .grad 속성에 기울기 저장.  
+    * **실습 과제:** 선형 회귀 모델(y=w×x+b)을 수동으로 구현, loss.backward() 호출 후 w.grad와 b.grad를 이용해 직접 파라미터를 업데이트하며 손실 감소 과정 확인.
 
-#### **Day 2: PyTorch Basics**
-- Understanding Tensor data structure and operations
-- Principles of Autograd and Gradient Descent
-- Implementing a Linear Regression model using PyTorch
+### **4일차: 진짜 신경망 만들기 \- 모델 구축과 학습**
 
-#### **Day 3: DNN (Deep Neural Network)**
-- MLP structure, activation functions, loss functions, optimizers
-- Causes and prevention techniques for Overfitting (Regularization, Dropout)
-- Building a DNN classification model (Dataset: Fashion MNIST)
+* **오전 (09:00-12:00) \- 이론 및 실습: 모델의 뼈대, nn.Module과 손실 함수**  
+  * **목표:** PyTorch의 고수준 API를 활용하여 재사용 가능한 신경망 모델 구축.  
+  * **내용:**  
+    * **torch.nn.Module:** 모든 신경망 모델의 부모 클래스.  
+      * \_\_init\_\_(self): 모델에 필요한 계층(nn.Linear 등) 정의.  
+      * forward(self, x): 입력 데이터의 연산 흐름 정의.  
+    * **손실 함수:** nn.MSELoss(회귀), nn.CrossEntropyLoss(분류) 등 사전 구현된 손실 함수 사용법 학습.  
+    * **실습 과제:** 3일차의 선형 회귀 모델을 nn.Module과 nn.Linear를 사용해 클래스 형태로 재작성.  
+* **오후 (13:00-18:00) \- 이론 및 실습: 학습의 엔진, 옵티마이저와 데이터로더**  
+  * **목표:** 학습 과정을 자동화하는 옵티마이저와 데이터로더의 역할 이해 및 활용.  
+  * **내용:**  
+    * **옵티마이저:** torch.optim 패키지(optim.SGD, optim.Adam)를 이용한 자동 파라미터 업데이트.  
+    * **표준 학습 루프 (3단계):**  
+      1. optimizer.zero\_grad(): 기울기 초기화.  
+      2. loss.backward(): 역전파로 기울기 계산.  
+      3. optimizer.step(): 파라미터 업데이트.  
+    * **Dataset & DataLoader:** 대용량 데이터를 효율적으로 관리.  
+      * Dataset: 데이터와 레이블을 하나씩 반환하는 로직 정의.  
+      * DataLoader: Dataset을 받아 배치(batch) 단위로 묶고, 셔플링 등 기능 제공.  
+    * **실습 과제:** Dataset, DataLoader, nn.Module 모델, Optimizer를 결합하여 완전한 학습 루프 구현.
 
-#### **Day 4: CNN (Convolutional Neural Network)**
-- Principles of Convolution and Pooling operations
-- Structures of major CNN architectures (LeNet-5, VGGNet, ResNet)
-- Building a CNN classification model (Dataset: CIFAR-10)
+### **5일차: 이미지를 보는 눈 \- CNN (합성곱 신경망)**
 
-#### **Day 5: RNN (Recurrent Neural Network) and NLP Basics**
-- Structure of RNN, LSTM, GRU and sequential data processing
-- Text data representation methods (Word Embeddings - Word2Vec)
-- Implementing an LSTM-based text classification model (Dataset: IMDB Movie Reviews)
+* **오전 (09:00-12:00) \- 이론: CNN의 시각적 직관**  
+  * **목표:** 이미지 처리에 특화된 CNN의 구조와 작동 원리를 직관적으로 이해.  
+  * **내용:**  
+    * **합성곱(Convolution) 연산:** 커널(필터)이 이미지를 스캔하며 국소적 특징(선, 질감 등)을 추출, 특징 맵(Feature Map) 생성.2  
+    * **주요 파라미터:** 채널, 패딩, 스트라이드 개념 이해.  
+    * **풀링(Pooling) 레이어:** 특징 맵의 크기를 줄여(downsampling) 계산량을 감소시키고, 위치 변화에 덜 민감한 모델 생성.2  
+    * **특징 계층:** 저수준 특징(선, 모서리)에서 고수준 특징(눈, 코, 입)으로 학습이 진행되는 계층적 구조 이해.  
+* **오후 (13:00-18:00) \- 실습: CIFAR-10 이미지 분류기 제작**  
+  * **목표:** PyTorch 지식을 총동원하여 실제 이미지 분류기 제작.  
+  * **내용:**  
+    * **데이터 준비:** torchvision을 이용한 CIFAR-10 데이터셋 다운로드, 정규화 등 전처리 및 DataLoader 생성.3  
+    * **CNN 모델 정의:** nn.Module 내에 nn.Conv2d, nn.MaxPool2d 레이어를 조합하여 CNN 구조 설계.3  
+    * **학습 및 평가:** nn.CrossEntropyLoss와 optim.SGD를 사용하여 모델을 학습시키고, 테스트 데이터셋으로 정확도 평가.3
 
+### **6일차: 시간의 흐름을 읽다 \- RNN (순환 신경망)**
 
-### **Week 2: Advanced Models and Service Development**
+* **오전 (09:00-12:00) \- 이론: 순차 데이터와 RNN/LSTM의 원리**  
+  * **목표:** 텍스트, 시계열 등 순차 데이터 처리 모델인 RNN과 LSTM의 원리 이해.  
+  * **내용:**  
+    * **RNN (Recurrent Neural Network):** 네트워크 내 순환 구조를 통해 이전 타임스텝의 정보(은닉 상태)를 현재 입력과 함께 처리.  
+    * **장기 의존성 문제:** 시퀀스가 길어질수록 과거 정보가 소실되는 RNN의 한계.  
+    * **LSTM (Long Short-Term Memory):** 장기 의존성 문제 해결을 위한 진보된 RNN 구조.  
+      * **셀 상태(Cell State):** 정보가 장기간 보존될 수 있는 '메모리 컨베이어 벨트'.4  
+      * **게이트(Gates):** Forget, Input, Output 3개의 게이트를 통해 셀 상태의 정보를 정교하게 제어.4  
+* **오후 (13:00-18:00) \- 실습: 문자 단위(Character-level) RNN으로 이름 국적 분류하기**  
+  * **목표:** 가변 길이의 순차 데이터를 처리하는 RNN 모델링 실습.  
+  * **내용:**  
+    * **데이터 전처리:** 텍스트(문자)를 고유 정수 인덱스 및 원-핫 벡터 텐서로 변환.5  
+    * **RNN 모델 정의:** nn.Module 내에 nn.RNN 또는 nn.LSTM 레이어를 사용하여 문자 단위 RNN 모델 구현.5  
+    * **학습 및 예측:** 모델 학습 후, 새로운 이름을 입력하여 국적을 예측하며 순차 패턴 학습 과정 확인.5
 
-#### **Day 6: Sentence Embedding and Semantic Search**
-- Principle of context-based embeddings (Sentence-BERT)
-- Concept and purpose of Vector Databases (Vector DB)
-- Implementing SBERT-based sentence similarity measurement and search functionality
+### **7일차: 거인의 어깨 위에서 \- LLM과 Gemini API**
 
-#### **Day 7: Transfer Learning and Fine-tuning**
-- Methods for Transfer Learning of image models
-- How to use the Hugging Face library (Transformers, Datasets)
-- Hands-on fine-tuning of Korean LLM using PEFT (LoRA) technique
+* **오전 (09:00-12:00) \- 이론: 트랜스포머와 어텐션 메커니즘**  
+  * **목표:** 현대 NLP의 근간인 트랜스포머 아키텍처의 핵심 원리 이해.  
+  * **내용:**  
+    * **트랜스포머 등장 배경:** RNN의 순차 처리 한계(병렬화 불가, 장기 의존성) 극복.  
+    * **셀프 어텐션(Self-Attention):** 문장 내 모든 단어 간의 연관성을 동시에 계산하여 문맥을 파악하는 핵심 메커니즘. Query, Key, Value 벡터를 통해 작동.7  
+    * **트랜스포머 구조:** 인코더-디코더 구조, 멀티헤드 어텐션을 통한 다각적 문맥 학습.7  
+* **오후 (13:00-18:00) \- 실습: Gemini API 첫걸음**  
+  * **목표:** 사전 훈련된 거대 모델(LLM)을 API로 활용하는 패러다임 전환 경험.  
+  * **내용:**  
+    * **API 키 발급 및 설정:** Google AI Studio에서 API 키 발급 및 환경 설정.8  
+    * **Python SDK 사용:** pip install google-generativeai 설치 및 기본 설정.8  
+    * **텍스트 생성:** model.generate\_content() 함수를 이용한 기본 텍스트 생성 및 프롬프트 엔지니어링 탐구.8  
+    * **멀티모달 입력 처리:** 텍스트와 이미지를 동시에 입력으로 사용하여 이미지 설명, 질의응답 등 고차원 AI 기능 구현.9
 
-#### **Day 8: Utilizing Commercial LLM APIs**
-- API-based AI service development architecture
-- Prompt Engineering techniques
-- Developing programs integrating commercial LLMs (OpenAI, Google API) (Q&A, Summarization)
-- Introduction to concepts of Generative Models (GAN) and MLOps
+### **8일차: AI를 서비스로 \- Streamlit 기반 애플리케이션 제작**
 
-#### **Day 9: Final Project - Development**
-- Topic selection and system design
-- Data collection and processing, model development and feature implementation
-- Team technical mentoring and problem-solving
+* **오전 (09:00-12:00) \- 실습: Python으로 웹 UI 만들기, Streamlit**  
+  * **목표:** 복잡한 웹 기술 없이 Python만으로 AI 모델을 서비스할 수 있는 웹 애플리케이션 제작 기술 습득.  
+  * **내용:**  
+    * **Streamlit 철학:** 데이터 과학자를 위한 빠르고 쉬운 웹 앱 개발 프레임워크.  
+    * **기본 위젯:** st.title, st.write, st.button, st.text\_input 등 UI 컴포넌트 사용법 학습.  
+    * **레이아웃:** st.sidebar, st.columns를 이용한 화면 구성.  
+    * **상태 관리:** st.session\_state를 이용해 상호작용 간 데이터(대화 기록 등) 유지.  
+* **오후 (13:00-18:00) \- 실습: Gemini API와 Streamlit을 연동한 대화형 챗봇 만들기**  
+  * **목표:** 학습한 기술을 총동원하여 실제 작동하는 대화형 챗봇 애플리케이션 제작.  
+  * **내용:**  
+    * **챗봇 UI 구성:** st.chat\_message와 st.chat\_input을 이용한 대화 인터페이스 구현.  
+    * **대화 기록 관리:** st.session\_state에 대화 내용을 리스트로 저장 및 화면에 표시.  
+    * **API 연동 로직:** 사용자 입력 시, 전체 대화 기록을 Gemini API에 전달하여 문맥에 맞는 답변을 받고, 이를 다시 st.session\_state에 저장 및 화면에 표시하는 로직 구현.9
 
-#### **Day 10: Final Project - Presentation**
-- Model performance improvement and feature enhancement
-- Team project outcome presentations
-- Course wrap-up and Q&A
+### **9-10일차: 최종 관문 \- AI 애플리케이션 팀 프로젝트**
 
-
-
-<br>
-<br>
-<br>
-
-# ຂັ້ນຕອນການພັດທະນາບໍລິການ AI ໂດຍອີງໃສ່ PyTorch ແລະ LLM
-
-
-### Ⅰ. ພາບລວມຂອງຫຼັກສູດ
-
-ຫຼັກສູດນີ້ໃຊ້ PyTorch ແລະ Google Colab. ໃນໄລຍະ 2 ອາທິດ, ທ່ານຈະຮຽນຮູ້ທິດສະດີ Deep Learning, LLM Fine-tuning, ວິທີການນໍາໃຊ້ Commercial API, ແລະກວມເອົາຂັ້ນຕອນທັງໝົດຂອງການພັດທະນາບໍລິການ AI. ເປົ້າໝາຍແມ່ນເພື່ອໃຫ້ນັກຮຽນມີຄວາມສາມາດໃນການພັດທະນາ Software AI ເຊິງເປັນທີ່ນິຍົມ.
-
----
-
-### Ⅱ. ເປົ້າໝາຍການຮຽນຮູ້
-
-- ສ້າງສະພາບແວດລ້ອມການພັດທະນາໂດຍອີງໃສ່ PyTorch ແລະ Google Colab
-- ເຂົ້າໃຈແລະປະຕິບັດໂຄງສ້າງ Model ຂອງ DNN, CNN, RNN
-- Fine-tune Language Model ໂດຍອີງໃສ່ Hugging Face Library
-- ເຂົ້າໃຈແລະນໍາໃຊ້ແນວຄິດ Embedding ແລະ Vector Database
-- ພັດທະນາບໍລິການ AI ໂດຍນໍາໃຊ້ Commercial LLM API
-- ປະຕິບັດຂັ້ນຕອນທັງໝົດຂອງການພັດທະນາບໍລິການ AI ຜ່ານໂຄງການກຸ່ມ
-
----
-
-### Ⅲ. ຫຼັກສູດ (10 ວັນ / 80 ຊົ່ວໂມງ)
-
-
-### **ອາທິດທີ 1: ພື້ນຖານ Deep Learning ແລະ Models ຫຼັກ**
-
-#### **ວັນທີ 1: ການແນະນຳຫຼັກສູດ ແລະ ສະພາບແວດລ້ອມການພັດທະນາ**
-- ແນວຄິດແລະປະຫວັດສາດຂອງ AI, Machine Learning, Deep Learning
-- ວິທີການນໍາໃຊ້ Google Colab (GPU, File System, ຄໍາສັ່ງ)
-- ຝຶກປະຕິບັດການນໍາໃຊ້ Numpy, Pandas, Matplotlib
-
-#### **ວັນທີ 2: ພື້ນຖານ PyTorch**
-- ເຂົ້າໃຈໂຄງສ້າງຂໍ້ມູນ Tensor ແລະການຄໍານວນ
-- ຫຼັກການຂອງ Autograd (ການຫາມະຕະພັນອັດຕະໂນມັດ) ແລະ Gradient Descent (ການຫຼຸດລະດັບຄວາມຊັນ)
-- ປະຕິບັດ Linear Regression Model ໂດຍອີງໃສ່ PyTorch
-
-#### **ວັນທີ 3: DNN (Deep Neural Network)**
-- ໂຄງສ້າງ Multi-layer Perceptron (MLP), Activation Function, Loss Function, Optimizer
-- ສາເຫດແລະເຕັກນິກການປ້ອງກັນ Overfitting (Regularization, Dropout)
-- ສ້າງ DNN Classification Model (Dataset: Fashion MNIST)
-
-#### **ວັນທີ 4: CNN (Convolutional Neural Network)**
-- ຫຼັກການຂອງການຄໍານວນ Convolution ແລະ Pooling
-- ໂຄງສ້າງສະຖາປັດຕະຍະກໍາ CNN ທີ່ສໍາຄັນ (LeNet-5, VGGNet, ResNet)
-- ສ້າງ CNN Classification Model (Dataset: CIFAR-10)
-
-#### **ວັນທີ 5: RNN (Recurrent Neural Network) ແລະ ພື້ນຖານ NLP**
-- ໂຄງສ້າງຂອງ RNN, LSTM, GRU ແລະການປະມວນຜົນຂໍ້ມູນຕາມລໍາດັບ
-- ວິທີການສະແດງຂໍ້ມູນຕົວອັກສອນ (Word Embedding - Word2Vec)
-- ປະຕິບັດ LSTM-based Text Classification Model (Dataset: IMDB Movie Reviews)
-
-
-### **ອາທິດທີ 2: Model ຂັ້ນສູງ ແລະ ການພັດທະນາບໍລິການ**
-
-#### **ວັນທີ 6: ການຝັງປະໂຫຍກ (Sentence Embedding) ແລະ ການຄົ້ນຫາຄວາມໝາຍ**
-- ຫຼັກການຂອງ Context-based Embedding (Sentence-BERT)
-- ແນວຄິດແລະການນໍາໃຊ້ Vector Database (Vector DB)
-- ປະຕິບັດການວັດແທກຄວາມຄ້າຍຄືກັນຂອງປະໂຫຍກແລະການຄົ້ນຫາໂດຍອີງໃສ່ SBERT
-
-#### **ວັນທີ 7: Transfer Learning ແລະ Fine-tuning**
-- ວິທີການ Transfer Learning ສໍາລັບ Image Model
-- ວິທີການນໍາໃຊ້ Hugging Face Library (Transformers, Datasets)
-- ຝຶກປະຕິບັດ LLM Fine-tuning ພາສາເກົາຫຼີໂດຍອີງໃສ່ເຕັກນິກ PEFT (LoRA)
-
-#### **ວັນທີ 8: ການນໍາໃຊ້ LLM API ເຊິງເປັນທີ່ນິຍົມ**
-- ສະຖາປັດຕະຍະກໍາການພັດທະນາບໍລິການ AI ໂດຍອີງໃສ່ API
-- ເຕັກນິກ Prompt Engineering
-- ພັດທະນາໂປຣແກຣມເຊື່ອມຕໍ່ກັບ Commercial LLM (OpenAI, Google API) (Q&A, Summarization)
-- ການແນະນໍາແນວຄິດ Generative Model (GAN), MLOps
-
-#### **ວັນທີ 9: ໂຄງການສຸດທ້າຍ - ການພັດທະນາ**
-- ການຄັດເລືອກຫົວຂໍ້ແລະການອອກແບບລະບົບ
-- ການເກັບກໍາແລະປະມວນຜົນຂໍ້ມູນ, ການພັດທະນາ Model ແລະການປະຕິບັດ Function
-- ການໃຫ້ຄໍາປຶກສາດ້ານເຕັກນິກແລະການແກ້ໄຂບັນຫາເປັນກຸ່ມ
-
-#### **ວັນທີ 10: ໂຄງການສຸດທ້າຍ - ການນໍາສະເໜີ**
-- ການປັບປຸງປະສິດທິພາບ Model ແລະການເພີ່ມເຕີມ Function
-- ການນໍາສະເໜີຜົນການພັດທະນາເປັນກຸ່ມ
-- ສະຫຼຸບຫຼັກສູດແລະການຖາມ-ຕອບ
-
-
-<br>
-<br>
-<br>
+* **개요:** 개별 기술 학습을 넘어 '문제 정의, 기술 선택, 협업, 발표'의 소프트웨어 엔지니어링 전 과정 축소 경험.  
+* **9일차 오전 \- 프로젝트 기획**  
+  * **목표:** '작동하는 AI 서비스 프로토타입 제작'.  
+  * **아이디어 브레인스토밍:** PyTorch, Gemini API, 멀티모달 등 학습 내용을 기반으로 자유롭게 아이디어 제안 및 토론.  
+  * **팀 구성 및 아이디어 선정:** 관심사 기반 팀 구성 및 최종 프로젝트 아이디어 확정.  
+* **9일차 오후 \- 개발 스프린트 1**  
+  * **설계 및 역할 분담:** 시스템 아키텍처 설계 및 팀원 간 역할 분담.  
+  * **핵심 기능 개발:** 역할에 따라 개발 착수, 강사 및 조교의 기술 멘토링 진행.  
+* **10일차 오전 \- 개발 스프린트 2 및 발표 준비**  
+  * **통합 및 디버깅:** 개발된 기능 통합 및 최종 테스트, 버그 수정.  
+  * **발표 준비:** 프로젝트 목적, 사용 기술, 구현 과정, 시연 시나리오를 담은 발표 자료 준비.  
+* **10일차 오후 \- 최종 발표 및 과정 수료**  
+  * **최종 발표:** 팀별 프로젝트 결과물 발표 및 시연.  
+  * **피드백 및 회고:** 동료 및 강사 피드백, 과정 전체 회고.  
+  * **수료:** 과정 이수자 대상 수료증 수여 및 교육과정 마무리.
