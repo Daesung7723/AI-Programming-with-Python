@@ -1,88 +1,103 @@
-# ------------------------------------------------------------------
-# 1. Setup Kaggle API and Download Data
-# ------------------------------------------------------------------
-# Install the Kaggle library
-!pip install kaggle
-
-# Setup for uploading the kaggle.json file
-from google.colab import files
-print("Please upload your Kaggle API token (kaggle.json) file.")
-files.upload() # This code will open a file selection window.
-
-# Create Kaggle directory and set permissions
-!mkdir -p ~/.kaggle
-!cp kaggle.json ~/.kaggle/
-!chmod 600 ~/.kaggle/kaggle.json
-
-# Download the Kaggle dataset (Car Dekho dataset)
-print("\nStarting dataset download...")
-!kaggle datasets download -d nehalbirla/vehicle-dataset-from-cardekho
-!unzip vehicle-dataset-from-cardekho.zip # Unzip the file
-print("Dataset download and extraction complete.")
-print("-" * 50)
-
-
-# ------------------------------------------------------------------
-# 2. Load Data and Check Basic Information
-# ------------------------------------------------------------------
-import pandas as pd
+import torch
+from transformers import DetrImageProcessor, DetrForObjectDetection
+from PIL import Image, ImageDraw, ImageFont
+import cv2  # OpenCV library
 import numpy as np
 
-# Read the CSV file into a pandas DataFrame
-df = pd.read_csv('CAR DETAILS FROM CAR DEKHO.csv')
+# 1. Prepare Deep Learning Model
+# ==================================
+print("Loading the deep learning model... Please wait.")
 
-print("--- Checking Basic Data Information ---")
-print("First 5 rows of the data:")
-print(df.head())
-print("\nData summary information:")
-df.info()
-print("-" * 50)
+# Check for GPU availability and set the device.
+# Note: The DETR model is heavy and will run very slowly on a CPU.
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {DEVICE}")
 
+# Load the pre-trained DETR (DEtection TRansformer) model and image processor.
+image_processor = DetrImageProcessor.from_pretrained("facebook/detr-resnet-50")
+model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50").to(DEVICE)
 
-# ------------------------------------------------------------------
-# Goal 1: Check and Handle Missing Values (This dataset has no missing values)
-# ------------------------------------------------------------------
-print("--- Checking for Missing Values ---")
-print(df.isna().sum())
-print("There are no missing values to handle in this dataset.")
-print("-" * 50)
+print("✅ Model ready!")
 
+# 2. Visualization Settings
+# ==================================
+# List of colors to use for the detected object bounding boxes.
+COLORS = [[0.000, 0.447, 0.741], [0.850, 0.325, 0.098], [0.929, 0.694, 0.125],
+          [0.494, 0.184, 0.556], [0.466, 0.674, 0.188], [0.301, 0.745, 0.933]]
 
-# ------------------------------------------------------------------
-# Goal 2: Create 'Brand' Column and Convert 'year' Column Type
-# ------------------------------------------------------------------
-print("--- Data Cleaning and Type Conversion ---")
-# Extract the first word from the 'name' column to create a 'Brand' column
-df['Brand'] = df['name'].str.split(' ').str[0]
+# Set the font for labels. (Uses default font if arial.ttf is not found)
+try:
+    font = ImageFont.truetype("arial.ttf", 15)
+except IOError:
+    font = ImageFont.load_default()
 
-# Convert the data type of the 'year' column to integer
-df['year'] = df['year'].astype(int)
+# 3. Real-time Webcam Processing
+# ==================================
+# Open the default webcam connected to the computer (device 0).
+cap = cv2.VideoCapture(0)
 
-print("Data after creating 'Brand' column and converting 'year' type:")
-print(df.head())
-print("\nData types after conversion:")
-print(df.dtypes)
-print("-" * 50)
+if not cap.isOpened():
+    raise IOError("Cannot open webcam. Please check the camera connection.")
 
+print("\n🚀 Starting real-time object detection. Press 'q' to quit.")
 
-# ------------------------------------------------------------------
-# Goal 3: Calculate Average Price by 'Brand'
-# ------------------------------------------------------------------
-print("--- Calculating Average Selling Price by Brand ---")
-# The selling_price is in Indian Rupees (INR).
-# Convert to integer for cleaner display (no decimals).
-avg_price_by_brand = df.groupby('Brand')['selling_price'].mean().astype(int).sort_values(ascending=False)
-print(avg_price_by_brand)
-print("-" * 50)
+# Continuously process frames until the 'q' key is pressed.
+while True:
+    # Read the current frame (a single image) from the webcam.
+    ret, frame = cap.read()
+    if not ret:
+        print("Failed to grab frame.")
+        break
 
+    # The deep learning model uses PIL Image objects, so convert the OpenCV BGR image to RGB.
+    image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
 
-# ------------------------------------------------------------------
-# Goal 4: Filter Cars with Mileage Less Than 10,000 km
-# ------------------------------------------------------------------
-print("--- Filtering cars with km_driven < 10,000 ---")
-# The mileage in the original data is low, so we filter by 10,000 km instead of 100,000 km.
-low_mileage_cars = df[df['km_driven'] < 10000]
-print(low_mileage_cars)
-print("-" * 50)
+    # --- Perform Object Detection ---
+    inputs = image_processor(images=image, return_tensors="pt").to(DEVICE)
+    outputs = model(**inputs)
 
-print("🎉 Kaggle Data Analysis Mini-Project Complete! 🎉")
+    # Post-process the model's output to extract objects with a confidence score > 90%.
+    target_sizes = torch.tensor([image.size[::-1]])
+    results = image_processor.post_process_object_detection(outputs, target_sizes=target_sizes, threshold=0.9)[0]
+
+    # --- Visualize Results ---
+    draw = ImageDraw.Draw(image)
+    for score, label, box in zip(results["scores"], results["labels"], results["boxes"]):
+        box = [round(i, 2) for i in box.tolist()]
+        
+        # Assign a color based on the label.
+        color_idx = label.item() % len(COLORS)
+        color = tuple(int(c * 255) for c in COLORS[color_idx])
+
+        # Draw the bounding box around the object.
+        draw.rectangle(box, outline=color, width=3)
+        
+        # Display the object label and confidence score as text.
+        label_text = f"{model.config.id2label[label.item()]}: {score:.2f}"
+        
+        # Note: The 'textbbox' method requires Pillow version 8.0.0 or higher.
+        try:
+            text_bbox = draw.textbbox((box[0], box[1]), label_text, font=font)
+            draw.rectangle(text_bbox, fill=color)
+        except AttributeError:
+            # Fallback for older Pillow versions
+            pass
+        
+        draw.text((box[0], box[1]), label_text, fill="white", font=font)
+
+    # Convert the PIL image back to the BGR format that OpenCV can display.
+    processed_frame = cv2.cvtColor(np.array(image), cv2.COLOR_RGB_BGR)
+
+    # Show the processed video in a window named 'Real-time Object Detection'.
+    cv2.imshow('Real-time Object Detection', processed_frame)
+
+    # Wait for a key press for 1ms, and if 'q' is pressed, exit the loop.
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# 4. Cleanup
+# ==================================
+# Release the webcam and destroy all windows when done.
+cap.release()
+cv2.destroyAllWindows()
+print("Program terminated.")
