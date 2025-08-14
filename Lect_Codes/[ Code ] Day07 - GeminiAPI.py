@@ -10,7 +10,7 @@ import os
 # os.environ["GEMINI_API_KEY"] = "YOUR_API_KEY"
 # API_KEY = os.environ.get("GEMINI_API_KEY")
 
-API_KEY = "Your API" # For testing, enter the API key here directly.
+API_KEY = "YOUR_API_KEY" # For testing, enter the API key here directly.
 
 if not API_KEY:
     print("Error: API key is not set. Please enter the key in the API_KEY variable or set the environment variable.")
