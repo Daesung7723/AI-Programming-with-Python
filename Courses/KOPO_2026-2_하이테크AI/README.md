@@ -13,7 +13,7 @@
 | Day | 날짜 | 주제 | 자료 |
 |:--:|---|---|---|
 | 1 | 10-02 | AI 개관 · NumPy · Colab | [바로가기](../../Lectures/Day01_AI개관_NumPy_Colab.md) |
-| 2 | 10-16 | 학습 원리 · PyTorch (텐서 · autograd · nn.Module) | 게시 예정 |
+| 2 | 10-16 | 학습 원리 · PyTorch (텐서 · autograd · nn.Module) | [바로가기](../../Lectures/Day02_학습원리_경사하강_PyTorch.md) |
 | 3 | 10-23 | CNN(Convolutional Neural Network, 합성곱 신경망) · 이미지 분류 (표지판 데이터) | 게시 예정 |
 | 4 | 10-30 | 모델 경량화 · ONNX(Open Neural Network Exchange, 개방형 신경망 교환 형식) · 온디바이스 추론 · AI 반도체 개관 | 게시 예정 |
 | 5 | 11-06 | Transformer · LLM(Large Language Model, 대규모 언어 모델) 개관 · Gemini API(Application Programming Interface) | 게시 예정 |
