@@ -1290,7 +1290,7 @@ print(row["labels"], names[row["labels"]], row["image"].size)
 | ③ | `['angular_leaf_spot', 'bean_rust', 'healthy']` — 라벨 번호 0·1·2의 순서 |
 | ④ | 라벨 번호와 클래스 이름 · 이미지 크기 `(500, 500)` |
 
-- 라벨 열의 이름은 `label`이 아니라 **`labels`**입니다 — 다른 데이터셋을 사용할 때 가장 먼저 확인할 부분
+- 라벨 열의 이름은 `label`이 아니라 **`labels`입니다** — 다른 데이터셋을 사용할 때 가장 먼저 확인할 부분
 - `row["image"]`는 PIL 이미지 — Day 1 8절에서 배열로 바꾼 이미지와 같은 형식
 
 | 결과 | 조치 |
